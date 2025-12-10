@@ -41,27 +41,40 @@
       greet("Ritik")();
       //Question 4 - Create a function makeAdder(x) which adds x to any number.
 
-      function makeAdder(x) {
-        return function (y) {
-          let adder = x + y;
-          console.log(adder);
+      // function makeAdder(x) {
+      //   return function (y) {
+      //     let adder = x + y;
+      //     console.log(adder);
+      //   };
+      // }
+      // makeAdder(5)(10);
+      // //Question 5 - Generate a unique ID using closures.
+
+      // function makeid() {
+      //   let id = 1;
+      //   return function idnext() {
+      //     console.log(id);
+      //     id = id + 1;
+      //   };
+      // }
+      // const nextId = makeid();
+
+      // nextId();
+      // nextId();
+      // nextId();
+ 
+      //Question5 -Write a closure-based function to calculate total salary with increments
+      
+      function salaryCalculate(baseSalary) {
+        let salary = baseSalary;
+
+        return function (increment) {
+          salary += increment;
+          console.log("totla Salary:", salary);
         };
       }
-      makeAdder(5)(10);
-      //Question 5 - Generate a unique ID using closures.
-
-      function makeid() {
-        let id = 1;
-        return function idnext() {
-          console.log(id);
-          id = id + 1;
-        };
-      }
-      const nextId = makeid();
-
-      nextId(); // 1
-      nextId(); // 2
-      nextId(); // 3
+      let employee1 = salaryCalculate(10000);
+      employee1(2000);
     </script>
   </body>
 </html>
