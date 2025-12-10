@@ -48,6 +48,20 @@
         };
       }
       makeAdder(5)(10);
+      //Question 5 - Generate a unique ID using closures.
+
+      function makeid() {
+        let id = 1;
+        return function idnext() {
+          console.log(id);
+          id = id + 1;
+        };
+      }
+      const nextId = makeid();
+
+      nextId(); // 1
+      nextId(); // 2
+      nextId(); // 3
     </script>
   </body>
 </html>
