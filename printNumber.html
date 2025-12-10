@@ -7,7 +7,7 @@
   </head>
   <body>
     <script>
-      //Create a function that prints numbers from 1 to 5 with 1-second delay
+      //Question 1 -Create a function that prints numbers from 1 to 5 with 1-second delay
 
       // function fn() {
       //   for (var i = 1; i <= 5; i++) {
@@ -20,7 +20,7 @@
       // }
       // fn();
 
-      //Create a function that returns another function which prints "Hello".
+      //Question 2 -Create a function that returns another function which prints "Hello".
 
       // function outer() {
       //   let a = "Hello";
@@ -31,7 +31,7 @@
       // }
       // outer();
 
-      //   Create a function greet(name) that returns another function which prints the name.
+      // Question 3 - Create a function greet(name) that returns another function which prints the name.
 
       function greet(name) {
         return function () {
@@ -39,6 +39,15 @@
         };
       }
       greet("Ritik")();
+      //Question 4 - Create a function makeAdder(x) which adds x to any number.
+
+      function makeAdder(x) {
+        return function (y) {
+          let adder = x + y;
+          console.log(adder);
+        };
+      }
+      makeAdder(5)(10);
     </script>
   </body>
 </html>
