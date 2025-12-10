@@ -10,17 +10,26 @@
       //Create a function that prints numbers from 1 to 5 with 1-second delay
 
       function fn() {
-
         for (var i = 1; i <= 5; i++) {
-          (function (x){
-          setTimeout(() => {
-            console.log(x);
-          }, x * 1000);
-        })(i)
-      }
-        console.log("namaste");
+          (function (x) {
+            setTimeout(() => {
+              console.log(x);
+            }, x * 1000);
+          })(i);
+        }
       }
       fn();
+
+      //Create a function that returns another function which prints "Hello".
+
+      function outer() {
+        let a = "Hello";
+        function inner() {
+          console.log(a);
+        }
+        inner();
+      }
+      outer();
     </script>
   </body>
 </html>
